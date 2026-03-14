@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Imagens Nasa</h1>
+        <div class="box">
+            <div class="acao">
+                <button onclick="getDados('hoje')">
+                    Veja a imagem de hoje!
+                </button>
+            </div>
+
+            <div class="acao data-linha">
+                <button onclick="getDados('data')">
+                    Veja a imagem da data selecionada
+                </button>
+                <input type="date" id="data-selecionada" min="1995-06-16">
+            </div>
+
+            <div class="acao">
+                <button onclick="getDados('aleatoria')">
+                    Veja uma imagem aleatória!
+                </button>
+            </div>
+        </div>
+
+    <div id="info">
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html> 

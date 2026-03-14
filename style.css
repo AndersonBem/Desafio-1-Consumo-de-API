@@ -1,0 +1,123 @@
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background: #273a70;
+            color:#E6EDF3;
+        }
+
+        button {
+            padding: 20px;
+            background:#2A4F7A;
+            color:white;
+            border-radius: 8px;
+        }
+
+        button:hover{
+            background:#3F6AA1;
+            color:black;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .box {
+            flex: 1; 
+            color:white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .acao {
+            display: flex;
+            gap: 10px;
+        }
+
+        .data-linha {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="date"]{
+            margin-top: 12px;
+            padding: 5px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            background: #E6EDF3;
+            text-align: center;
+        }
+
+
+        .card{
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            padding: 30px;
+            background: #10233d;
+            border: 1px solid #2f4f77;
+            border-radius: 14px;
+            box-shadow: 0 0 18px rgba(0,0,0,0.25);
+        }
+
+        .card img {
+            width: 420px;
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .card iframe{
+            width: 100%;
+            max-width: 420px;
+            height: 240px;
+        }
+
+        .titulo{
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .data-publi{
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .descricao{
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .copyright{
+            margin-top: 20px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        @media(max-width:800px){
+            .container{
+                flex-wrap: wrap;
+            }
+
+            .box{
+                flex: 1 1 45%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button{
+                width: 270px;
+            }
+        }
+
+        @media(max-width:500px){
+            .box{
+                flex: 1 1 100%;
+            }
+        }
