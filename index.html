@@ -8,31 +8,37 @@
 </head>
 <body>
     <h1>Imagens Nasa</h1>
-        <div class="box">
-            <div class="acao">
-                <button onclick="getDados('hoje')">
-                    Veja a imagem de hoje!
-                </button>
-            </div>
 
-            <div class="acao data-linha">
-                <button onclick="getDados('data')">
-                    Veja a imagem da data selecionada
-                </button>
-                <input type="date" id="data-selecionada" min="1995-06-16">
-            </div>
+    <div id="preview"></div>
 
-            <div class="acao">
-                <button onclick="getDados('aleatoria')">
-                    Veja uma imagem aleatória!
-                </button>
-            </div>
+    <div class="box">
+        <div class="acao slide">
+            <button onclick="getDados('hoje')">
+                Veja a imagem de hoje!
+            </button>
         </div>
 
-    <div id="info">
+        <div class="acao data-linha slide">
+            <button onclick="getDados('data')">
+                Veja a imagem da data selecionada
+            </button>
+            <input type="date" id="data-selecionada" min="1995-06-16">
+        </div>
+
+        <div class="acao slide">
+            <button onclick="getDados('aleatoria')">
+                Veja uma imagem aleatória!
+            </button>
+        </div>
     </div>
 
-
+    <!-- popup -->
+    <div id="popup-info" class="popup">
+        <div class="popup-box">
+            <a href="#" class="fechar-popup">×</a>
+            <div id="popup-conteudo"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

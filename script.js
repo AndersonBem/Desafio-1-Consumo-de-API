@@ -35,41 +35,42 @@ async function getDados(tipo) {
 
 
 //Essa função foi criada para evitar repetição de codigo
-async function mostrarImagem(data){
-
-    //Essa condicional serve para informar, caso a api não retorne nada ou tenha algum erro no tipo de midia
-    if(!data || !data.media_type){
-        document.getElementById("info").innerHTML = `
-            <div class="card">
+function mostrarImagem(data) {
+    if (!data || !data.media_type) {
+        document.getElementById("preview").innerHTML = `
+            <div class="preview-card">
                 <p>Erro ao carregar imagem da NASA. Tente novamente.</p>
             </div>
         `;
         return;
     }
 
-    
-    
-    //Essa variavel foi criada porque a API as vezes retorna links do youtube
-    //Data exemplo de video para teste 16/12/2020
     let media;
 
-    if(data.media_type === "image"){
-        media = `<img src="${data.hdurl || data.url}">`
+    if (data.media_type === "image") {
+        media = `<img src="${data.hdurl || data.url}" alt="${data.title}">`;
     } else {
-        let videoUrl = data.url.replace("watch?v=", "embed/")
-
-        media = `<iframe src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`
+        let videoUrl = data.url.replace("watch?v=", "embed/");
+        media = `<iframe src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`;
     }
 
-    let dataBrasil= new Date(data.date).toLocaleDateString("pt-BR", {timeZone: "UTC"});
+    let dataBrasil = new Date(data.date).toLocaleDateString("pt-BR", {
+        timeZone: "UTC"
+    });
 
-    document.getElementById("info").innerHTML = `
-        <div class="card">
+    document.getElementById("preview").innerHTML = `
+        <div class="preview-card">
             <h2 class="titulo">${data.title}</h2>
             ${media}
             <p class="data-publi">Data da publicação: ${dataBrasil}</p>
-            <p class="descricao">${data.explanation}</p>
-            <p class="copyright">Direitos reservados: ${data.copyright || "Nasa"}</p>
+            <a href="#popup-info" class="botao-info">Ver informações</a>
         </div>
-    `
+    `;
+
+    document.getElementById("popup-conteudo").innerHTML = `
+        <h2>${data.title}</h2>
+        <p><strong>Data da publicação:</strong> ${dataBrasil}</p>
+        <p>${data.explanation}</p>
+        <p class="copyright">Direitos reservados: ${data.copyright || "Nasa"}</p>
+    `;
 }
