@@ -10,6 +10,10 @@ A aplicação está disponível online:
 
 👉 https://atv1-anderson-bem.netlify.app/
 
+Segunda versão da aplicação, com atualização de desing voltado pra mobile
+
+👉https://atv2-atualizacao-anderson-bem.netlify.app/
+
 ---
 
 # 🧠 Sobre o projeto
