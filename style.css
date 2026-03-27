@@ -50,6 +50,12 @@ button:hover {
     align-items: center;
 }
 
+.label {
+    font-size: small;
+    margin-top: 2%;
+    margin-bottom: -5%;
+}
+
 input[type="date"] {
     margin-top: 12px;
     padding: 5px;
@@ -171,6 +177,23 @@ input[type="date"] {
     font-style: italic;
     opacity: 0.9;
 }
+
+#btn-instalar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    background: #4173ac;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#btn-instalar:hover {
+    background: #3F6AA1;
+}
+
 
 
 @media(max-width:800px){

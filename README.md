@@ -14,6 +14,10 @@ Segunda versão da aplicação, com atualização de desing voltado pra mobile
 
 👉https://atv2-atualizacao-anderson-bem.netlify.app/
 
+Terceira versão da aplicação, com utilização de hardware mobile(vibração) e PWA
+
+👉https://atv3-pwa-hardware-anderson-bem.netlify.app/
+
 ---
 
 # 🧠 Sobre o projeto

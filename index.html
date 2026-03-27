@@ -3,43 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto web que consome a API da NASA (APOD) para exibir imagens astronômicas do dia, permitindo busca por data e visualização aleatória.">
+    <meta name="theme-color" content="#273a70">
     <title>Universo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h1>Imagens Nasa</h1>
+    <main>
+        <button id="btn-instalar">
+            Instalar aplicativo
+        </button>
+        <h1>Imagens Nasa</h1>
+        <div id="preview"></div>
 
-    <div id="preview"></div>
+        <div class="box">
+            <div class="acao slide">
+                <button onclick="getDados('hoje')">
+                    Veja a imagem de hoje!
+                </button>
+            </div>
 
-    <div class="box">
-        <div class="acao slide">
-            <button onclick="getDados('hoje')">
-                Veja a imagem de hoje!
-            </button>
+            <div class="acao data-linha slide">
+                <button onclick="getDados('data')">
+                    Veja a imagem da data selecionada
+                </button>
+                <label class="label" for="data-selecionada">Selecione uma data</label>
+                <input type="date" id="data-selecionada" min="1995-06-16">
+            </div>
+
+            <div class="acao slide">
+                <button onclick="getDados('aleatoria')">
+                    Veja uma imagem aleatória!
+                </button>
+            </div>
         </div>
 
-        <div class="acao data-linha slide">
-            <button onclick="getDados('data')">
-                Veja a imagem da data selecionada
-            </button>
-            <input type="date" id="data-selecionada" min="1995-06-16">
+        <!-- popup -->
+        <div id="popup-info" class="popup">
+            <div class="popup-box">
+                <a href="#" class="fechar-popup">×</a>
+                <div id="popup-conteudo"></div>
+            </div>
         </div>
 
-        <div class="acao slide">
-            <button onclick="getDados('aleatoria')">
-                Veja uma imagem aleatória!
-            </button>
-        </div>
-    </div>
-
-    <!-- popup -->
-    <div id="popup-info" class="popup">
-        <div class="popup-box">
-            <a href="#" class="fechar-popup">×</a>
-            <div id="popup-conteudo"></div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./service-worker.js')
+                        .then(() => console.log('Service Worker registrado'))
+                        .catch(err => console.log('Erro ao registrar Service Worker:', err));
+                });
+            }
+        </script>
+    </main>
 </body>
 </html> 

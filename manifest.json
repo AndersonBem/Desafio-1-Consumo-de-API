@@ -1,0 +1,68 @@
+{
+  "name": "Imagens Nasa",
+  "short_name": "INASA",
+  "description": "Aplicação web que consome a API APOD da NASA para exibir imagens astronômicas do dia, por data ou aleatórias.",
+  "theme_color": "#273a70",
+  "background_color": "#273a70",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "icons/29.png",
+      "sizes": "29x29",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/40.png",
+      "sizes": "40x40",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/57.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/58.png",
+      "sizes": "58x58",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/60.png",
+      "sizes": "60x60",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/80.png",
+      "sizes": "80x80",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/87.png",
+      "sizes": "87x87",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
