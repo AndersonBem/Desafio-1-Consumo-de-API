@@ -15,8 +15,13 @@ Segunda versão da aplicação, com atualização de desing voltado pra mobile
 👉https://atv2-atualizacao-anderson-bem.netlify.app/
 
 Terceira versão da aplicação, com utilização de hardware mobile(vibração) e PWA
+(No Android, a aplicação utiliza o recurso de vibração para fornecer feedback nas interações dos botões e disponibiliza um botão para instalação do PWA diretamente na interface.
 
-👉https://atv3-pwa-hardware-anderson-bem.netlify.app/
+Já no iOS, devido a limitações do navegador Safari, não é possível utilizar a API de vibração nem exibir o botão de instalação. Como alternativa, foi implementado o uso da geolocalização do dispositivo.
+
+Nessa plataforma, a instalação da aplicação deve ser realizada manualmente por meio das opções do navegador, utilizando a função “Adicionar à Tela de Início”.)
+
+👉https://atv3-v2-pwa-hardware-anderson-bem.netlify.app
 
 ---
 
